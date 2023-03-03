@@ -1,0 +1,64 @@
+<!-- <h1>book works!</h1>
+    <h1> The input is : {{inputValue}}</h1>
+    <img [src]="source" alt="alternate"> -->
+    <!-- <button  (click)="handleClick($event)" [disabled]="isDisabled">Click  </button> -->
+    <!-- <button (click) ="handleImage()">Show</button> -->
+    
+    <!-- <h1 *ngIf="toShow">Show this tag</h1> -->
+    
+    <!-- <button (click)="handleDisplay()">Display</button>
+        
+        <ul *ngFor="let name of names">
+            <li>{{name}}</li>
+        </ul> -->
+        
+        <!-- <ng-template *ngIf="toDisplay"> -->
+            <!-- <ul *ngIf="toDisplay" >
+                <li *ngFor="for x of names">x</li>
+            </ul> -->
+            <!-- <ul *ngFor="let x of names">
+                <li>x</li>
+            </ul> -->
+            <!-- </ng-template> -->
+            
+            <div class="container">
+                <input class="input" type="text" (keydown)=handleInput($event) [(ngModel)]="temp" [placeholder]="placeHolder">
+                <div>
+
+                    <button (click)="addTodo()">Add</button>
+                    <button (click)="deleteTodo()">Delete</button>
+                </div>
+    <div class="heading">
+        <h1>To do List</h1>
+    </div>
+    <ng-template [ngIf]="names.length !== 0" [ngIfElse]="dontShow">
+        <div class="todoItems">
+            <h1 *ngFor="let name of names; let i=index">{{name}}<button style="margin-left:4px;" (click)="deleteItem(i)">Delete</button></h1>
+        </div>
+      </ng-template>
+      
+      <ng-template #dontShow>
+        <div>
+          <h1 style="text-align: center;">No items to show ☹️</h1>
+          <h1 style="text-align: center;color:rgb(0, 199, 90)">Add a Todo</h1>
+        </div>
+      </ng-template>
+    <!-- <div *ngIf="toShow" class="todoItems">
+        <ng-element *ngIf="names.length === 0">
+            <h1>No items to display</h1>
+        </ng-element>
+
+        <h1 *ngFor="let name of names; let i=index">{{name}}<button style="margin-left:4px;" (click)="deleteItem(i)">Delete</button></h1>
+      </div> -->
+ </div>
+
+ <!-- <ng-element [ngSwitch]="day">
+    <h1 *ngSwitchCase="1">Monday</h1>
+    <h1 *ngSwitchCase="2">Tuesday</h1>
+    <h1 *ngSwitchCase="3">Wednesday</h1>
+    <h1 *ngSwitchCase="4">Thursday</h1>
+    <h1 *ngSwitchCase="5">Friday</h1>
+    <h1 *ngSwitchCase="6">Saturday</h1>
+    <h1 *ngSwitchCase="7">Sunday</h1>
+    <h1 *ngSwitchDefault>Invalid Day</h1>
+ </ng-element> -->
