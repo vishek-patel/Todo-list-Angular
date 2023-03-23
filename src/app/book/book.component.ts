@@ -35,11 +35,13 @@ export class BookComponent {
     }
     else {
       this.temp = event.target.value
+      
     }
     // this.temp = event.target.value
   }
   addTodo(){
-    this.names.unshift(this.temp)
+    this.temp.length>0 && this.names.unshift(this.temp)
+    this.temp = ''
   }
   deleteTodo(){
     this.names.pop()
@@ -55,6 +57,15 @@ export class BookComponent {
     // this.toDisplay = !this.toDisplay
     // this.names=(this.inputValue.split(" "))
   }
+
+  ngOnInit():void {
+    this.names = ["Have a ", "Nice", "Day! 🙂"]
+  }
+
+  ngOnDestroy():void{
+    console.log("Destroyed")
+  }
+
   deleteItem(index: number){
     this.names.splice(index, 1);
   }
