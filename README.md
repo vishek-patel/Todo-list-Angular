@@ -1,4 +1,8 @@
-# Day1
+# Check it out here : 
+
+https://todo-list-app-angular-v1.netlify.app/
+
+# Todo-List-App | Vishek
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
